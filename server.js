@@ -1,0 +1,31 @@
+ require("dotenv").config();
+ const express = require('express');
+ const cors = require('cors');
+const connectDB = require("./config/db");
+ const port = process.env.PORT || 5000 ;
+
+
+
+
+
+//  initialize the express app
+const app = express();
+app.use(express.json());
+
+
+// middleware
+
+// db connection
+connectDB();
+
+// routes
+// app.use('/')
+
+
+
+// testing route
+app.get('/', (req, res)=>{
+     res.send('Srcl-group server is running...')
+})
+
+app.listen(port,()=> console.log(`Server is running on the port ${port}`))
