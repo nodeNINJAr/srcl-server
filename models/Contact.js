@@ -19,12 +19,12 @@ const contactSchema = new mongoose.Schema(
       type: String,
       required: [true, "Phone number is required"], // Phone number is mandatory
       trim: true,
-      match: [/^\d{10}$/, "Please enter a valid 10-digit phone number"], // Validates phone number format
+      match: [/^\d{11}$/, "Please enter a valid 11-digit phone number"], // Validates phone number format
     },
     whatsappNumber: {
       type: String,
       trim: true,
-      match: [/^\d{10}$/, "Please enter a valid 10-digit WhatsApp number"], // Validates WhatsApp number format
+      match: [/^\d{11}$/, "Please enter a valid 11-digit WhatsApp number"], // Validates WhatsApp number format
     },
     message: {
       type: String,

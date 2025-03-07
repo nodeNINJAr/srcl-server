@@ -6,7 +6,7 @@ const router = express.Router();
 
 // routes
 router.post('/contact',addContactMessage)
-router.get('/contact', getAllContactData);
+router.get('/contacts', getAllContactData);
 // router.delete('/contact/:id',);
 
 module.exports = router;
