@@ -6,8 +6,6 @@ const connectDB = require("./config/db");
 
 
 
-
-
 //  initialize the express app
 const app = express();
 app.use(express.json());
@@ -18,8 +16,12 @@ app.use(express.json());
 // db connection
 connectDB();
 
+
 // routes
-// app.use('/')
+app.use('/api/user', require('./routes/contactRoute'));
+
+
+
 
 
 
